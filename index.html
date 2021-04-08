@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <!-- * Favicon -->
+      <link
+         rel="apple-touch-icon-precomposed"
+         sizes="57x57"
+         href="images/favicon/apple-touch-icon-57x57.png"
+      />
+      <link
+         rel="apple-touch-icon-precomposed"
+         sizes="114x114"
+         href="images/favicon/apple-touch-icon-114x114.png"
+      />
+      <link
+         rel="apple-touch-icon-precomposed"
+         sizes="72x72"
+         href="images/favicon/apple-touch-icon-72x72.png"
+      />
+      <link
+         rel="apple-touch-icon-precomposed"
+         sizes="144x144"
+         href="images/favicon/apple-touch-icon-144x144.png"
+      />
+      <link
+         rel="apple-touch-icon-precomposed"
+         sizes="60x60"
+         href="images/favicon/apple-touch-icon-60x60.png"
+      />
+      <link
+         rel="apple-touch-icon-precomposed"
+         sizes="120x120"
+         href="images/favicon/apple-touch-icon-120x120.png"
+      />
+      <link
+         rel="apple-touch-icon-precomposed"
+         sizes="76x76"
+         href="images/favicon/apple-touch-icon-76x76.png"
+      />
+      <link
+         rel="apple-touch-icon-precomposed"
+         sizes="152x152"
+         href="images/favicon/apple-touch-icon-152x152.png"
+      />
+      <link rel="icon" type="image/png" href="images/favicon/favicon-196x196.png" sizes="196x196" />
+      <link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96" />
+      <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32" />
+      <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16" />
+      <link rel="icon" type="image/png" href="images/favicon/favicon-128.png" sizes="128x128" />
+      <meta name="application-name" content="&nbsp;" />
+      <meta name="msapplication-TileColor" content="#FFFFFF" />
+      <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+      <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+      <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+      <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+      <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+      <!-- * Stylesheet-->
+      <link rel="Stylesheet" href="styles.css" />
+      <!-- * jQuery Script-->
+      <script
+         src="https://code.jquery.com/jquery-3.5.1.min.js"
+         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+         crossorigin="anonymous"
+      ></script>
+      <script src="scripts.js"></script>
+      <!--* Fonts -->
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+         rel="stylesheet"
+      />
+      <title>Pixel Mage</title>
+   </head>
+   <!-- * End of Head -->
+   <body>
+      <!-- ! Game Aesthetics -->
+      <div class="sounds">
+         <audio id="bg-music" autoplay loop>
+            <source src="sounds/8-bit-rpg-adam-hayne-boss-battle.mp3" type="audio/mpeg" />
+         </audio>
+         <audio id="bg-music2" loop>
+            <source src="sounds/8-bit-adam-haynes-heroines-theme.mp3" type="audio/mpeg" />
+         </audio>
+         <!-- ! End of line -->
+         <audio id="game-over" loop>
+            <source src="sounds/game-over.mp3" type="audio/mpeg" />
+         </audio>
+         <!-- ! End of line -->
+         <audio id="curse-sound">
+            <source src="sounds/curse.mp3" type="audio/mpeg" />
+         </audio>
+         <!-- ! End of line -->
+         <audio id="fire-sound">
+            <source src="sounds/fire.mp3" type="audio/mpeg" />
+         </audio>
+         <!-- ! End of line -->
+         <audio id="ice-sound">
+            <source src="sounds/ice.mp3" type="audio/mpeg" />
+         </audio>
+         <!-- ! End of line -->
+         <audio id="tornado-sound">
+            <source src="sounds/tornado.mp3" type="audio/mpeg" />
+         </audio>
+         <!-- ! End of line -->
+         <audio id="sword-sound">
+            <source src="sounds/sword.mp3" type="audio/mpeg" />
+         </audio>
+         <!-- ! End of line -->
+         <audio id="kronus-sound-01">
+            <source src="sounds/kronus.mp3" type="audio/mpeg" />
+         </audio>
+         <!-- ! End of line -->
+         <audio id="kronus-sound-02">
+            <source src="sounds/kronus2.mp3" type="audio/mpeg" />
+         </audio>
+         <!-- ! End of line -->
+         <audio id="kronus-dead">
+            <source src="sounds/kronus-dead.mp3" type="audio/mpeg" />
+         </audio>
+         <!-- ! End of line -->
+         <audio id="potion-sound">
+            <source src="sounds/potion.mp3" type="audio/mpeg" />
+         </audio>
+         <!-- ! End of line -->
+         <audio id="char-hit">
+            <source src="sounds/char-hit.mp3" type="audio/mpeg" />
+         </audio>
+         <!-- ! End of line -->
+      </div>
+      <div id="bg">
+         <img id="main-bg" class="bg" src="images/bg1.gif" alt="Background" />
+      </div>
+
+      <!-- ! Char Image -->
+      <img
+         id="char"
+         src="images/rightWalk/walk0.gif"
+         alt="Character"
+         height="70"
+         style="position: absolute; top: 540px; left: 100px; z-index: 3"
+      />
+
+      <!-- ! Spell Image-->
+      <img
+         id="spell"
+         src="images/spell1.gif"
+         alt="Spell"
+         width="100"
+         style="position: absolute; top: 530px; left: 10px; visibility: hidden"
+      />
+
+      <!-- ! Fireball Image-->
+      <img
+         id="fireball"
+         src="images/fireball.gif"
+         alt="Fireball"
+         width="280"
+         style="position: absolute; top: 430px; left: 10px; visibility: hidden"
+      />
+      <!-- ! Curse -->
+      <img
+         id="curse"
+         src="images/curse.gif"
+         alt="curse"
+         width="400"
+         style="position: absolute; top: 400px; left: 10px; z-index: 4; visibility: hidden"
+      />
+      <!-- ! Tornado -->
+      <img
+         id="tornado"
+         src="images/tornado.gif"
+         alt="Tornado"
+         width="280"
+         style="position: absolute; top: 430px; left: 0px; z-index: 4; visibility: hidden"
+      />
+
+      <!-- ! Melee-->
+      <img
+         id="melee"
+         src="images/melee.gif"
+         alt="Melee"
+         width="150"
+         style="position: absolute; top: 490px; left: 10px; visibility: hidden"
+      />
+
+      <!-- ! Boss -->
+      <img
+         id="boss"
+         src="images/monster.gif"
+         alt="Boss"
+         width="1200"
+         style="position: absolute; top: -80px; left: 900px; z-index: -1"
+      />
+
+      <!-- ? ==================== Boss HP ==================== -->
+      <div id="boss-info">
+         <h1>KRONUS (Lvl. 999)</h1>
+         <h2 id="boss-hp"></h2>
+      </div>
+
+      <!-- ? ==================== Boss HP ==================== -->
+      <div id="damage-visual" style="visibility: visibile">
+         <p id="ice-counter" style="display: none"></p>
+         <p id="fire-counter" style="display: none"></p>
+         <p id="curse-counter" style="display: none"></p>
+         <p id="tornado-counter" style="display: none"></p>
+         <p id="melee-counter" style="display: none"></p>
+      </div>
+
+      <!-- ? ==================== Char Info ==================== -->
+      <div id="char-info">
+         <h1 id="char-name"></h1>
+         <h2 id="char-hp"></h2>
+         <h3 id="total-damage"></h3>
+      </div>
+      <div class="potions">
+         <div class="potion" id="hp">
+            <img src="images/potions/hp.png" id="hp-pot" alt="HP Pot" height="30" />
+            <h2 id="hp-pot-counter"></h2>
+            <p>(1) +1000 HP</p>
+         </div>
+         <div class="potion" id="str">
+            <img src="images/potions/str.gif" id="str-pot" alt="Str Pot" height="30" />
+            <h2 id="str-pot-counter"></h2>
+            <p>(2) +Melee Damage</p>
+         </div>
+         <div class="potion" id="magic">
+            <img src="images/potions/magic.png" id="magic-pot" alt="Magic Pot" height="30" />
+            <h2 id="magic-pot-counter"></h2>
+            <p>(3) +Magic Attack</p>
+         </div>
+         <button id="god-mode">Enter Limbo</button>
+      </div>
+      <div id="base-damage-stats">
+         <div class="stat">
+            <h2>(A)</h2>
+            <br />
+            <h2>Ice Bolt</h2>
+            <p id="ice-stat"></p>
+         </div>
+         <div class="stat">
+            <h2>(S)</h2>
+            <br />
+            <h2>Fireball</h2>
+            <p id="fire-stat"></p>
+         </div>
+         <div class="stat">
+            <h2>(D)</h2>
+            <br />
+            <h2>Nado</h2>
+            <p id="tornado-stat"></p>
+         </div>
+         <div class="stat">
+            <h2>(F)</h2>
+            <br />
+            <h2>Curse</h2>
+            <p id="curse-stat"></p>
+         </div>
+
+         <div class="stat">
+            <h2>(Space)</h2>
+            <br />
+            <h2>Melee</h2>
+            <p id="sword-stat"></p>
+         </div>
+      </div>
+      <div class="dps-info">
+         <div class="info">
+            <h2>Current Multiplier</h2>
+            <p id="multiplier"></p>
+         </div>
+      </div>
+      <div class="damage-received">
+         <h2 id="damage-received"></h2>
+      </div>
+
+      <!-- ! ==================== Boss Skills ==================== -->
+
+      <img
+         id="boss-skill-two"
+         src="images/boss-skills/skill2.gif"
+         alt="Direct"
+         width="700"
+         style="position: absolute; top: 420px; left: 650px; z-index: 5; visibility: hidden"
+      />
+
+      <img
+         id="boss-skill-three"
+         src="images/boss-skills/skill3.gif"
+         alt="AOE"
+         width="1000"
+         style="position: absolute; top: 40px; left: 100px; z-index: 5; visibility: hidden"
+      />
+
+      <!-- ! ==================== Crystal ==================== -->
+      <img id="crystal" src="images/crystal.gif" alt="Crystal" width="400px" />
+      <div id="you-win">
+         <p>You defeated Lord Kronus. Extract a piece of this crystal and save your village!</p>
+         <button id="replay" onClick="window.location.reload();">Replay</button>
+      </div>
+      <div id="you-lose">
+         <p>You were defeated by Kronus! Better luck next time.</p>
+         <button id="replay" onClick="window.location.reload();">Replay</button>
+      </div>
+      <!-- ! ==================== Mute Sound ==================== -->
+      <p id="mute-bg-music">Mute BG Music</p>
+
+      <footer>
+         <p>For Educational Purposes Only</p>
+         <p>&copy; Vincent Casilla 2020</p>
+      </footer>
+   </body>
+</html>

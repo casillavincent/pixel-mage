@@ -1,0 +1,305 @@
+html {
+   background-color: black;
+   overflow: hidden;
+   font-family: "Press Start 2P", sans-serif;
+}
+* {
+   margin: 0px;
+   padding: 0px;
+}
+
+/*
+===============================================================================
+Layout Things
+===============================================================================
+*/
+.bg {
+   position: absolute;
+   left: 0px;
+   min-width: 1920px;
+   min-height: 500px;
+   z-index: -1;
+}
+
+/*
+===============================================================================
+Info
+===============================================================================
+*/
+#boss-info {
+   position: absolute;
+   top: 700px;
+   right: 20px;
+}
+#boss-info h1 {
+   color: orange;
+   font-size: 25px;
+}
+#boss-info h2 {
+   color: red;
+}
+
+/*
+===============================================================================
+Layout Things
+===============================================================================
+*/
+#damage-visual {
+   position: absolute;
+   width: 500px;
+   height: 250px;
+   top: 190px;
+   left: 1000px;
+   font-size: 25px;
+   text-align: center;
+   margin: 0px;
+   padding: 0px;
+   color: red;
+   text-shadow: 5px 3px black;
+}
+
+#damage-visual #curse-counter {
+   position: relative;
+   left: 60px;
+   color: violet;
+}
+#damage-visual #tornado-counter {
+   position: relative;
+   left: 40px;
+   color: grey;
+}
+
+#damage-visual #ice-counter {
+   position: relative;
+   left: 100px;
+   color: lightblue;
+}
+
+#damage-visual #fire-counter {
+   position: relative;
+   left: 80px;
+   color: orange;
+}
+
+#char-info {
+   color: magenta;
+   position: absolute;
+   top: 700px;
+   left: 20px;
+   font-size: 10px;
+}
+
+#char-hp {
+   color: red;
+   font-size: 25px;
+}
+
+#char-info h3 {
+   color: white;
+   font-size: 20px;
+}
+
+/*
+===============================================================================
+Potions
+===============================================================================
+*/
+.potions {
+   color: white;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   top: 700px;
+   left: 350px;
+   width: 500px;
+}
+
+.potions .potion {
+   font-size: 10px;
+   flex-direction: column;
+   justify-content: space-around;
+   align-content: center;
+   text-align: center;
+   width: 75px;
+   height: 90px;
+   margin: 5px;
+   border: 1px solid magenta;
+   padding: 10px;
+}
+.potions .potion img {
+   margin-bottom: 5px;
+}
+.potions .potion p {
+   margin-top: 10px;
+}
+
+#god-mode {
+   cursor: pointer;
+   height: 112px;
+   width: 97px;
+   padding: 10px;
+   color: magenta;
+   border: 1px solid magenta;
+   background-color: transparent;
+   font-family: "Press Start 2P", sans-serif;
+}
+/*
+===============================================================================
+Crystal
+===============================================================================
+*/
+#crystal {
+   position: absolute;
+   top: 210px;
+   left: 1000px;
+}
+#you-win {
+   position: absolute;
+   top: 250px;
+   left: 925px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   color: black;
+   background-color: white;
+   width: 500px;
+   height: 100px;
+   border: 5px solid #000;
+   padding: 20px;
+}
+
+#you-lose {
+   position: absolute;
+   top: 250px;
+   left: 250px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   color: black;
+   background-color: white;
+   width: 500px;
+   height: 100px;
+   border: 5px solid #000;
+   padding: 20px;
+}
+#replay {
+   cursor: pointer;
+   background-color: transparent;
+   border: 2px solid black;
+   padding: 10px;
+   font-family: "Press Start 2P", sans-serif;
+   width: 100px;
+   margin: auto;
+}
+
+#replay:hover {
+   color: white;
+   background-color: black;
+}
+
+/*
+===============================================================================
+Crystal
+===============================================================================
+*/
+#base-damage-stats {
+   position: absolute;
+   top: 705px;
+   left: 830px;
+   border: 1px solid magenta;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   color: white;
+   font-size: 11px;
+   width: 550px;
+   text-align: center;
+}
+#base-damage-stats .stat {
+   margin: 10px;
+}
+.stat p {
+   font-size: 15px;
+   margin-top: 15px;
+}
+#base-damage-stats .stat:nth-child(1) {
+   color: lightblue;
+}
+#base-damage-stats .stat:nth-child(2) {
+   color: orange;
+}
+#base-damage-stats .stat:nth-child(3) {
+   color: gray;
+}
+#base-damage-stats .stat:nth-child(4) {
+   color: violet;
+}
+#base-damage-stats .stat:nth-child(5) {
+   color: red;
+}
+.dps-info {
+   position: relative;
+   top: 650px;
+   color: white;
+   width: 400px;
+   height: 150px;
+}
+.info {
+   margin: 10px;
+}
+.info h2 {
+   font-size: 15px;
+}
+.info p {
+   font-size: 30px;
+   color: red;
+}
+
+/*
+===============================================================================
+Damage Received
+===============================================================================
+*/
+
+#damage-received {
+   color: red;
+   text-shadow: 5px 3px black;
+   position: absolute;
+   top: 500px;
+   left: 50px;
+   text-align: center;
+}
+
+/*
+===============================================================================
+Mute Button
+===============================================================================
+*/
+
+#mute-bg-music {
+   color: magenta;
+   background-color: transparent;
+   border: 1px solid magenta;
+   font-size: 15px;
+   padding: 10px;
+   width: 250px;
+   position: absolute;
+   top: 830px;
+   left: 394px;
+   text-align: center;
+   cursor: pointer;
+}
+/*
+===============================================================================
+Footer
+===============================================================================
+*/
+footer {
+   color: white;
+   font-size: 10px;
+   position: absolute;
+   top: 650px;
+   left: 20px;
+}
