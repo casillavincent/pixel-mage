@@ -12,3 +12,11 @@
 - Drink all your potions to increase base damage
 - Watch your health!
 - Enter Limbo?
+
+
+#### Screenshots
+<img src="https://user-images.githubusercontent.com/73447863/113974451-cf41ae00-97f2-11eb-9be9-2b4a8682e82c.png" alt="Pixel Mage Screenshots" width="750" />
+<img src="https://user-images.githubusercontent.com/73447863/113974458-d23c9e80-97f2-11eb-9228-4f9fb9345b55.png" alt="Pixel Mage Screenshots" width="750" />
+
+
+
